@@ -1,6 +1,7 @@
 <template>
   <li class="post-item">
     <div>
+      <p>ID: {{ post.id }}</p>
       <h4>Название: {{ post.title }}</h4>
       <p>Описание: {{ post.body }}</p>
     </div>
