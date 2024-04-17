@@ -1,5 +1,5 @@
 <template>
-  <select class="select" :v-model:value="modelValue" @change="changeOptions">
+  <select class="select" :value="modelValue" @change="changeOptions">
     <option class="select__option select__option_inactive" disabled value="">Выберите из списка</option>
     <option class="select__option" v-for="option in options" :key="option.value" :value="option.value">
       {{ option.name }}

@@ -9,8 +9,11 @@ export default {
     modelValue: [String, Number],
   },
   methods: {
-    updateInput(event) {
-      this.$emit('update:modelValue', event.target.value);
+    // updateInput(event) {
+    //   this.$emit('update:modelValue', event.target.value);
+    // },
+    updateInput(event: Event) {
+      this.$emit('update:modelValue', (event.target as HTMLInputElement).value);
     },
   },
 };

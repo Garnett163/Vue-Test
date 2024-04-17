@@ -1,5 +1,5 @@
 <template>
-  <form class="post-form" @submit.prevent>
+  <form class="post-form" name="create-post-form" @submit.prevent>
     <h4>Создание поста</h4>
     <MyInput placeholder="Название" v-model="post.title" />
     <MyInput placeholder="Описание" v-model="post.body" />
@@ -28,6 +28,14 @@ export default {
         body: '',
         id: null,
       };
+    },
+  },
+  watch: {
+    post: {
+      handler(newVal) {
+        console.log(newVal);
+      },
+      deep: true,
     },
   },
 };
